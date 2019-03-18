@@ -1,0 +1,22 @@
+<router-outlet></router-outlet>
+<div *ngIf = "chart" class="reportChart">
+  <canvas id="canvas">{{ chart }}</canvas>
+</div>
+
+<div *ngiIf="courses">
+   <div class ="studentyearTable">
+     <div *ngFor ="let item of courses">
+       <table class="container">
+         <caption><strong>{{item.Name}}</strong>(Year : {{item.Year}})</caption>
+         <tr>
+           <th>Student</th>
+           <th>Year of Arrival</th>
+         </tr>
+         <tr *ngFor="let year of Student">
+           <td>{{ year.Name }}}</td>
+           <td> {{ year.YearAmount }}</td>
+         </tr>
+       </table>
+     </div>
+   </div>
+</div>
